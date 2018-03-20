@@ -1,5 +1,5 @@
 #install.packages("readxl")
-
+# bármit
 library(readxl)
 
 tmp <- readxl::read_xlsx("sample.xlsx", 2)
