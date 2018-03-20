@@ -1,3 +1,5 @@
+#install.packages("readxl")
+
 library(readxl)
 
 tmp <- readxl::read_xlsx("sample.xlsx", 2)
@@ -44,7 +46,9 @@ dt[,.(name)]
 
 # lista
 
-tmp_list <- list(A_1 = 1:10, B = letters[1:10], A_0 = 20:31, tükörfuró = 1:31)
+tmp_list <- list(A_1 = 1:10,
+                 B = letters[1:10],
+                 tükörfuró = 1:31)
 tmp_list[1]
 tmp_list[[1]]
 tmp_list$A
@@ -62,3 +66,7 @@ lapply(tmp_list, function(x) sum(x$num))
 # szűrni a chr15, chr22-re
 # valamint szűrni a start-ot, legyen kisebb, mint 500000
 # további legyen + irányú a strand
+rm(list = ls())
+# a betöltött csomagok, nem törlődnek!!!!
+detach("package:strict", unload = TRUE)
+tmp <- data.table::fread("02/table.bed")
