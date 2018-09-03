@@ -11,17 +11,18 @@ install.packages("tidyverse")
 library(magrittr)
 
 # adat beolvasása a readxl csomag segítségével
-tmp <- readxl::read_xlsx("sample.xlsx")
+tmp <- readxl::read_xlsx("data/sample.xlsx")
 summary(tmp)
 str(tmp)
 
 # adat beolvasása a xlsx csomag segítségével
-tmp <- xlsx::read.xlsx("sample.xlsx")
+tmp <- xlsx::read.xlsx("data/sample.xlsx")
+tmp <- xlsx::read.xlsx("data/sample.xlsx", sheetIndex = 1)
 summary(tmp)
 str(tmp)
 
 # adat beolvasása a openxlsx csomag segítségével
-tmp <- openxlsx::read.xlsx("sample.xlsx")
+tmp <- openxlsx::read.xlsx("data/sample.xlsx")
 summary(tmp)
 str(tmp)
 
