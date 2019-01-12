@@ -1,3 +1,0 @@
-# ggplot
-
-library(ggplot)
